@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Kantumruy_Pro } from "next/font/google";
 import { LanguageRoot } from "@/components/language-root";
+import { siteDescription, siteName, siteUrl } from "@/lib/site";
 import "./globals.css";
 
 const kantumruy = Kantumruy_Pro({
@@ -8,9 +9,28 @@ const kantumruy = Kantumruy_Pro({
   subsets: ["khmer", "latin"],
 });
 
+// Defaults for every page. A page can override any of these in its own metadata.
+// The Open Graph image comes from app/opengraph-image.tsx.
 export const metadata: Metadata = {
-  title: { default: "កត់ទុក", template: "%s · កត់ទុក" },
-  description: "កត់ទុក — កន្លែងផ្ទាល់ខ្លួនសម្រាប់កត់ត្រា និងតាមដានកិច្ចការរបស់អ្នក។",
+  // Lets the other fields use relative paths such as "/login".
+  metadataBase: new URL(siteUrl),
+  title: { default: `${siteName} — បញ្ជីកិច្ចការផ្ទាល់ខ្លួន`, template: "%s · កត់ទុក" },
+  description: siteDescription,
+  applicationName: "Kot Tuk",
+  keywords: ["កត់ទុក", "បញ្ជីកិច្ចការ", "កម្មវិធីកត់ត្រាកិច្ចការ", "Kot Tuk", "task manager", "to-do list", "Khmer to-do app"],
+  openGraph: {
+    type: "website",
+    siteName,
+    title: `${siteName} — បញ្ជីកិច្ចការផ្ទាល់ខ្លួន`,
+    description: siteDescription,
+    locale: "km_KH",
+    alternateLocale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${siteName} — បញ្ជីកិច្ចការផ្ទាល់ខ្លួន`,
+    description: siteDescription,
+  },
 };
 
 // The pages are prerendered in Khmer, and the visitor's language is only known in the

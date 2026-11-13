@@ -1,0 +1,67 @@
+<!doctype html>
+<!--
+  Source of the Khmer link-preview image, assets/og/og-km.png.
+
+  Next.js's image generator cannot shape Khmer script, so this image is drawn by a real
+  browser instead. After changing this file, regenerate the PNG from the project root with
+  Chrome (needs an internet connection for the font):
+
+    chrome --headless=new --hide-scrollbars --window-size=1200,630 --virtual-time-budget=5000 --screenshot=assets/og/og-km.png assets/og/og-km.html
+
+  Keep the layout and colours in step with the English image in app/opengraph-image.tsx.
+-->
+<html lang="km">
+<head>
+<meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@400;500;600;700&display=block" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; }
+  html, body { width: 1200px; height: 630px; overflow: hidden; }
+  body { display: flex; align-items: center; justify-content: space-between; padding: 0 80px; background: linear-gradient(135deg, #f5f4ef 0%, #e9f1e7 55%, #d9e7d8 100%); color: #253029; font-family: "Kantumruy Pro", sans-serif; }
+  .copy { width: 600px; }
+  .brand { display: flex; align-items: center; gap: 20px; font-size: 44px; font-weight: 700; }
+  .mark { display: grid; place-items: center; width: 64px; height: 64px; border-radius: 20px; background: #345f4c; }
+  h1 { margin-top: 50px; font-size: 68px; font-weight: 700; line-height: 1.35; }
+  h1 em { display: block; color: #5c8268; font-style: normal; }
+  .tagline { margin-top: 26px; font-size: 28px; line-height: 1.6; color: #6f8475; }
+  .card { width: 400px; padding: 30px; border: 2px solid #e6e9e1; border-radius: 32px; background: white; box-shadow: 0 40px 80px -40px rgba(38, 65, 46, 0.45); }
+  .task { display: flex; align-items: center; gap: 20px; padding: 22px 0; font-size: 26px; color: #303d34; }
+  .task + .task { border-top: 2px solid #f0f2ed; }
+  .task span { flex: 1; }
+  .check { display: grid; place-items: center; width: 40px; height: 40px; flex: none; border: 3px solid #c8d5c8; border-radius: 50%; }
+  .done { color: #90a094; }
+  .done span { text-decoration: line-through; }
+  .done .check { border-color: #527c5e; background: #527c5e; }
+  .dot { width: 16px; height: 16px; flex: none; border-radius: 50%; }
+</style>
+</head>
+<body>
+  <div class="copy">
+    <div class="brand">
+      <div class="mark"><svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+      កត់ទុក
+    </div>
+    <h1>ទុកកន្លែងសម្រាប់<em>អ្វីដែលសំខាន់។</em></h1>
+    <p class="tagline">បញ្ជីកិច្ចការផ្ទាល់ខ្លួនរបស់អ្នក។<br>រីកចម្រើនបន្តិចម្តងៗ ជារៀងរាល់ថ្ងៃ។</p>
+  </div>
+  <div class="card">
+    <div class="task done">
+      <div class="check"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+      <span>រៀបចំផែនការសប្តាហ៍</span>
+      <div class="dot" style="background: #c77664"></div>
+    </div>
+    <div class="task done">
+      <div class="check"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+      <span>សរសេររបាយការណ៍</span>
+      <div class="dot" style="background: #c59a46"></div>
+    </div>
+    <div class="task">
+      <div class="check"></div>
+      <span>ទូរស័ព្ទទៅលោកយាយ</span>
+      <div class="dot" style="background: #83a88a"></div>
+    </div>
+  </div>
+</body>
+</html>
