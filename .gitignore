@@ -22,7 +22,31 @@
 
 # misc
 .DS_Store
+Thumbs.db
 *.pem
+
+# editors (personal settings; shared VS Code settings can still be committed)
+.idea/
+*.swp
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+
+# claude code (personal, per-machine settings)
+.claude/settings.local.json
+
+# firebase
+.firebase/
+.firebaserc.local
+firebase-debug.log*
+firestore-debug.log*
+ui-debug.log*
+database-debug.log*
+pubsub-debug.log*
+# Admin SDK service account keys: these give full access to the project
+*service-account*.json
+*serviceAccount*.json
+*-firebase-adminsdk-*.json
 
 # debug
 npm-debug.log*
@@ -32,6 +56,8 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+# a template listing the variable names, without real values, may be committed
+!.env.example
 
 # vercel
 .vercel
